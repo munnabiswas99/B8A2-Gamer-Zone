@@ -117,17 +117,16 @@ nav li {
   font-weight: 700;
 }
 /* card section */
-.card-section{
+.card-section {
   text-align: center;
 }
-.cards{
+.cards {
   display: flex;
   justify-content: space-between;
   padding-left: 40px;
   padding-right: 40px;
-
 }
-.card{
+.card {
   width: 342px;
   height: 400px;
   border-radius: 16px;
@@ -137,12 +136,12 @@ nav li {
 .image-container {
   position: relative;
   display: inline-block;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .image-container::after {
-  content: '\f04b';
-  font-family: "Font Awesome 5 Free"; 
+  content: "\f04b";
+  font-family: "Font Awesome 5 Free";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -159,14 +158,31 @@ nav li {
 .image-container:hover::after {
   opacity: 1;
 }
+/* play section */
+.play-section {
+  display: flex;
+  padding: 100px;
+  margin-left: 50px;
+}
+.play-section-description{
+  margin-top: 80px;
+  text-align: right;
+}
+#play-section-img1 {
+  margin-left: 150px;
+}
+#play-section-img2 {
+  margin-left: 20px;
+  width: 318.5px;
+  height: 365.083px;
+  border: 2px solid rgb(67, 67, 145);
+  position: relative;
+  bottom: 280px;
+}
 
-
+/* responsive for mobile */
 
 @media screen and (max-width: 576px) {
-  .banner {
-    width: 576px;
-    align-items: center;
-  }
   nav {
     flex-direction: column;
     margin: 0px;
@@ -177,21 +193,66 @@ nav li {
   }
   .bnr-section1,
   .bnr-section2 {
-    width: 576px;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0px;
-    margin: 0px;
+  }
+  .banner-img {
+    max-width: 100%;
   }
   .section2-description {
     text-align: left;
   }
-  .banner-img {
-    width: 576px;
+  .cards {
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+  }
+  .play-section{
+    flex-direction: column;
     margin: 0px;
     padding: 0px;
+    max-width: 100%;
+  }
+  #play-section-img1{
+    margin: 0px;
+    max-width: 100%;
   }
 }
+
+/* responsive for tab */
 @media screen and (min-width: 576px) and (max-width: 960px) {
+  nav {
+    flex-direction: column;
+    margin: 0px;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .bnr-section1,
+  .bnr-section2 {
+    flex-direction: column;
+  }
+  .banner-img {
+    max-width: 100%;
+  }
+  .section2-description {
+    text-align: left;
+  }
+  .cards {
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+  }
+  .play-section{
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  #play-section-img1{
+    margin: 0px;
+    max-width: 100%;
+  }
 }
