@@ -8,6 +8,17 @@
   font-weight: 400;
   color: #534c64;
 }
+.secondary-font {
+  color: #7d2ca5ba;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.header-font {
+  color: #0b0223;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
 .btn-primary {
   font-size: 1.25rem;
   font-weight: 600;
@@ -71,7 +82,6 @@ nav li {
 .banner-content > h2 {
   font-size: 6rem;
   font-weight: 800;
-  color: #7d2ca5ba;
 }
 .banner-description {
   display: flex;
@@ -101,30 +111,72 @@ nav li {
 .section2-description {
   text-align: right;
 }
-.section2-description > h3 {
-  color: #7d2ca5ba;
-  font-size: 3rem;
-  font-weight: 600;
-}
 .section2-footer {
   color: #534c64;
   font-size: 2rem;
   font-weight: 700;
 }
+/* card section */
+.card-section{
+  text-align: center;
+}
+.cards{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+
+}
+.card{
+  width: 342px;
+  height: 400px;
+  border-radius: 16px;
+}
+
+/* play button */
+.image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; 
+}
+
+.image-container::after {
+  content: '\f04b';
+  font-family: "Font Awesome 5 Free"; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-container:hover::after {
+  opacity: 1;
+}
+
+
+
 @media screen and (max-width: 576px) {
-  .banner{
+  .banner {
     width: 576px;
     align-items: center;
   }
-  nav{
+  nav {
     flex-direction: column;
     margin: 0px;
   }
-  nav ul{
+  nav ul {
     display: flex;
     flex-direction: column;
   }
-  .bnr-section1, .bnr-section2{
+  .bnr-section1,
+  .bnr-section2 {
     width: 576px;
     flex-direction: column;
     align-items: center;
@@ -132,16 +184,14 @@ nav li {
     padding: 0px;
     margin: 0px;
   }
-  .section2-description{
+  .section2-description {
     text-align: left;
   }
-  .banner-img{
+  .banner-img {
     width: 576px;
     margin: 0px;
     padding: 0px;
   }
 }
 @media screen and (min-width: 576px) and (max-width: 960px) {
-
-  
 }
